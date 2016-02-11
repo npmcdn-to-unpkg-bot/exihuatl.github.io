@@ -1,0 +1,65 @@
+//- Document // -----------
+extends components/document-head
+block pageWrapper
+
+  .preloader
+    .preloader-content
+
+  button.cog-mobileButton
+    i.fa.fa-undo
+
+  #cog-mainContent.cog-content
+    .inner
+      header
+        .container
+          .row
+            .col.sm-10.offset-sm-1
+              img.portrait.bordered(src="https://lh3.googleusercontent.com/juG0-NAfkBoosqxZaqlhy_7yB0tFo12QoKdPbv8xW8c=s250-no" alt="")
+              .clearfix
+              .separator
+              h1.cog-header
+                span.inner
+                  span This is Patrick!
+              .separator
+              p Hi, I'm professional web developer and amateur designer. I love beeing minimal and creative. I always try to make my website as lightweight as possible.
+                span Do you want to know more ? Click on about!
+              .separator
+      main
+        ul.cog-menuList
+          li
+            a.violet(href="#about") About
+          li
+            a.orange(href="#resume") Resume
+          li
+            a.green(href="#portfolio") Portfolio
+          li
+            a.blue(href="#blog") Blog
+          li
+            a.red(href="#contact") Contact
+      footer
+        ul.cog-socials
+          li
+            a.facebook(href="#" target="_blank")
+              i.fa.fa-facebook
+          li
+            a.twitter(href="#" target="_blank")
+              i.fa.fa-twitter
+          li
+            a.google-plus(href="#" target="_blank")
+              i.fa.fa-google-plus
+
+  include components/about
+  include components/resume
+  include components/portfolio
+  include components/blog
+  include components/contact
+
+  // JavaScripts
+  script(src="dist/js/resume.min.js")
+  script(src="dist/js/main.js")
+  script(type='text/javascript')
+    $('.cog-slick').slick({
+    'autoplay': true,
+    'arrows': false,
+    'dots': true
+    });

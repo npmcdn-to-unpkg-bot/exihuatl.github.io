@@ -1,0 +1,74 @@
+// Floats //
+.pull-left
+  float left !important
+.pull-right
+  float right !important
+
+// Clearfix hack from nib
+.clearfix
+  clearfix()
+
+// Hide and Show //
+@media (max-width $screen-xs)
+  .hide-xs
+    responsive-invisibility()
+  .visible-xs
+    repsonsive-visibility()
+
+@media (min-width $screen-sm) and (max-width $screen-sm-max)
+  .hide-sm
+    responsive-invisibility()
+  .visible-sm
+    repsonsive-visibility()
+
+@media (min-width $screen-md-min) and (max-width $screen-md-max)
+  .hide-md
+    responsive-invisibility()
+  .visible-md
+    repsonsive-visibility()
+
+@media (min-width $screen-lg-min) and (max-width $screen-lg-max)
+  .hide-lg
+    responsive-invisibility()
+  .visible-lg
+    repsonsive-visibility()
+
+@media (min-width $screen-xl-min)
+  .hide-xl
+    responsive-invisibility()
+  .visible-xl
+    repsonsive-visibility()
+
+
+// Margins and Paddings //
+
+$sizes = 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150, 200
+$paddingMargins = p, m
+$pm = padding, margin
+$positions = t, l, b, r
+$pos = top
+
+
+for $paddingMargin in $paddingMargins
+  if $paddingMargin == p
+    $pm = padding
+  else
+    $pm = margin
+
+  for $position in $positions
+    if $position == t
+      $pos = top
+    else if $position == b
+      $pos = bottom
+    else if $position == l
+      $pos = left
+    else if $position == r
+      $pos = right
+
+    for $size in $sizes
+      .{$paddingMargin}{$position}{$size}
+        {$pm}-{$pos} unit($size, px)
+
+      .{$paddingMargin}v{$size}
+        {$pm}-top unit($size, px)
+        {$pm}-bottom unit($size, px)

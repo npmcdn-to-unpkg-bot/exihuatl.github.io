@@ -1,0 +1,47 @@
+section#contact.cog-content.toRight
+  .inner
+    .container
+      .row
+        .col.sm-10.offset-sm-1
+          .header
+            h2.cog-header
+              span.inner
+                span Contact
+      .main
+        .cog-map
+          a(href="https://www.google.com/maps/place/Gmina+Skaryszew,+Poland/@51.3097762,21.2494219,15z/data=!4m2!3m1!1s0x471867a0ff42039d:0x818250193ee62c88" target="_blank")
+            img.bordered(src="dist/images/map.jpg" alt="")
+        .row
+          .col.sm-6
+            p If you have any questions feel free to contact me via email and I'll try to answer your questions as soon as possible. Unfortunatly contact form is only for demo purpose right now, because the site is hosted (with love) by GitHub.
+            ul.cog-list
+              li
+                i.fa.fa-home
+                span Skaryszew
+              li
+                i.fa.fa-phone
+                a(href="tel:12345678")
+                  span (12) 345 678
+              li
+                i.fa.fa-envelope-o
+                a(href="mailto:exihuatl@gmail.com")
+                  span exihuatl@gmail.com
+          .col.sm-5.offset-sm-1
+            form
+              .cog-input
+                input.cog-input-field(id="contact-name" required type="text")
+                label(for="contact-name")
+                  span Name
+              .cog-input
+                input.cog-input-field(id="contact-email" required type="email")
+                label(for="contact-email")
+                  span Email
+              .cog-input
+                input.cog-input-field(id="contact-subject" required type="text")
+                label(for="contact-subject")
+                  span Subject
+              .cog-input
+                textarea.cog-input-field(id="contact-message" required rows="4")
+                label(for="contact-message")
+                  span Textarea
+              button(type="submit") Send

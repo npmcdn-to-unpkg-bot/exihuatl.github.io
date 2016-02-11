@@ -1,0 +1,89 @@
+html
+  font-size 62.5% // REM hack
+
+body
+  font-family $font-family
+  font-weight normal
+  letter-spacing: .1px;
+  line-height 1.5
+  color black
+
+  @media only screen and (min-width: $screen-xs)
+    font-size $base-font-size-mobile
+  @media only screen and (min-width: $screen-md)
+    font-size $base-font-size-tablet
+  @media only screen and (min-width: $screen-xl)
+    font-size $base-font-size-desktop
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6
+  font-family $headers-font-family
+  color $headers-color
+  margin $headers-margin
+  font-weight 400
+  &.title
+  font-size 1.25em
+  font-weight 500
+  a, small
+    color inherit
+    font-weight inherit
+
+h1, .h1
+  line-height 1
+  font-weight 300
+
+h2, .h2
+  line-height 1
+
+h3, .h3
+  line-height 1.15
+
+h4, .h4
+  line-height 1.25
+
+h5, .h5
+  line-height 1.33
+
+h6, .h6
+  line-height 1.6
+  font-weight 500
+
+p
+  font-size 1em
+  line-height 1.71
+  font-weight inherit
+  &.lead
+    font-weight 500
+
+a
+  color $link-color
+  text-decoration none
+  transition color 0.2s ease
+  &:hover, &:focus
+    color $link-hover-color
+    text-decoration $link-hover-decoration
+
+blockquote
+  margin 20px 0
+  padding-left 1.5rem
+  border-left $blockquote-border-width solid
+  border-color $blockquote-border-color
+
+// Icon Styles
+
+i
+  line-height: inherit;
+
+  &.left
+    float left
+    margin-right 15px
+  &.right
+    float right
+    margin-left 15px
+  &.tiny
+    font-size 1rem
+  &.small
+    font-size 2rem
+  &.medium
+    font-size 4rem
+  &.large
+    font-size 6rem

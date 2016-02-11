@@ -1,0 +1,32 @@
+.dropdown
+  position relative
+
+.dropdown-content
+  @extend .z-depth-1
+  background white
+  margin 0
+  top 0
+  display none
+  min-width 100px
+  max-height 650px
+  overflow-y auto
+  opacity 0
+  position absolute
+  white-space nowrap
+  z-index 1
+  will-change width, height
+  li
+    clear both
+    color black
+    cursor pointer
+    line-height 1.5
+    width 100%
+    text-align left
+    text-transform none
+    &:hover, &.active
+      background #eee
+    > a, > span
+      font-size 1.2em
+      color $motive
+      display block
+      padding 1rem 1rem

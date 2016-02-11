@@ -1,0 +1,867 @@
+@import url('http://fonts.googleapis.com/css?family=Oswald:400,300,700')
+@import '../clockwork/stylus/clockwork'
+@import 'animated'
+@import 'slick'
+@import 'magnific-popup'
+
+// ------------------------------------
+.separator
+  margin 2em auto
+  height 1px
+  display block
+  width 20%
+  background $motive
+
+// ------------------------------------
+
+body
+  z-index 1
+  background-image url(../images/background.jpg)
+  background-size cover
+  background-attachment fixed
+  width 100vw
+  height 100vh
+html
+  width 100vw
+  height 100vh
+  overflow hidden
+
+// -----------------------------------
+
+.bordered
+  border 1px solid $motive;
+  padding 1em
+img
+  pointer-events none
+  user-select none
+
+// Mobile Button //
+.cog-mobileButton
+  outline none
+  position fixed
+  top 7px
+  right 5px
+  z-index 4999
+  border 1px solid $motive
+  width 40px
+  height 40px
+  line-height 37px
+  font-size 22px
+  text-align center
+  background-color transparent
+  color white
+  display block
+  transition all 0.2s ease
+  &:hover
+    @extend .z-depth-2
+    &:active
+      @extend .z-depth-1-half
+  @media (min-width $screen-md)
+    top 10px
+
+// Sections //
+.cog-content
+  overflow hidden
+  transition-property all
+  transition-duration 1s
+  transition-timing-function ease
+  transform: translateZ(0)
+  position absolute
+  text-align center
+  top 0
+  left 25%
+  width 50%
+  height 100vh
+  z-index -1
+  background-color white
+  > .inner
+    height @height
+  &.toRight
+    &.active
+      left 0
+      z-index 4000
+  &.toLeft
+    &.active
+      left 50%
+      z-index 4000
+.toRightGO
+  left 50%
+.toLeftGO
+  left 0
+
+#cog-mainContent
+  z-index 5000
+#about
+  background-color $violet
+#resume
+  background-color $orange
+#portfolio
+  background $green
+#blog
+  background-color $blue
+#contact
+  background-color $red
+  text-align left
+
+.cog-content:not(#cog-mainContent)
+  color white
+
+// Headers //
+.cog-header
+  display inline-block
+  position relative
+  font-size 2em
+  font-weight 200
+  text-transform uppercase
+  font-family Oswald, sans-serif
+  &:before, &:after
+    content ''
+    position absolute
+    top 50%
+    width 100vw
+    height 1px
+    background-color $motive
+  &:before
+    left -100vw
+  &:after
+    right -100vw
+  .inner
+    display block
+    position relative
+    padding 0 20px
+    &:before, &:after
+      content ''
+      width 1px
+      height 100%
+      position absolute
+      top 0
+      background-color $motive
+    &:before
+      left 0
+    &:after
+      right 0
+h2.cog-header
+  margin-bottom 5rem
+
+// Main Section // ----------------------
+
+header, .header
+  text-align center
+  margin 2.5em 0 1em
+  p
+    margin 0
+    span
+      display block
+.portrait
+  max-height 14em
+
+// Menu List //
+.cog-menuList
+  text-align center
+  margin 0
+  padding-bottom 1rem
+  li
+    a
+      border 1px solid $motive
+      transition-duration 300ms
+      transition-property all
+      color black
+      display inline-block
+      width 100%
+      max-width 300px
+      padding 1em 0
+      overflow hidden
+      position relative
+      &:hover
+        @extend .z-depth-1-half
+        &:active
+          @extend .z-depth-1
+      &.active
+        color white
+        i
+          color white
+        &.violet
+          border-color $violet
+          background-color $violet
+        &.orange
+          border-color $orange
+          background-color $orange
+        &.green
+          border-color $green
+          background-color $green
+        &.blue
+          border-color $blue
+          background-color $blue
+        &.red
+          border-color $red
+          background-color $red
+    + li
+      margin-top 1em
+
+// Socials
+.cog-socials
+  display block
+  text-align center
+  padding 1.5rem 0 3.5rem
+  li
+    display inline-block
+    a
+      display block
+      margin 0 1em
+      height 40px
+      width 40px
+      line-height 40px
+      font-size 20px
+      position relative
+      transition color 0.3s ease
+      text-align center
+      &:before
+        content ''
+        position absolute
+        top 0
+        left 0
+        width 100%
+        height 100%
+        border 1px solid $motive
+        transform rotate(45deg)
+        transition all 0.3s ease
+      &:hover, &:active, &:focus
+        &.facebook
+          color #3b5998
+          &:before
+            border-color #3b5998
+        &.twitter
+          color #1dcaff
+          &:before
+            border-color #1dcaff
+        &.google-plus
+          color #d34836
+          &:before
+            border-color #d34836
+      &:hover
+        &:before
+          transform rotate(-45deg)
+          @extend .z-depth-1-half
+// Icon Boxes
+.cog-iconBox-container:hover
+  transition all 0.4s ease
+  .cog-iconBox
+    opacity 0.4
+    &:hover
+      opacity 1
+.cog-iconBox
+  display table
+  width 100%
+  transition opacity 0.4s ease
+  padding 1.5em 0
+  .cog-iconBox-icon, .cog-iconBox-content
+    display table-cell
+    vertical-align middle
+  .cog-iconBox-header
+    font-size 1.75em
+  .cog-iconBox-icon-inner
+    display inline-block
+    font-size 2.5em
+    position relative
+    width 100px
+    height 100px
+    line-height 100px
+    &:before
+      content ''
+      position absolute
+      top 0
+      left 0
+      width 100%
+      height 100%
+      border 1px solid $motive
+      transform rotate(45deg)
+      transition transform 0.3s linear
+  .cog-iconBox-content
+    padding-right 50px
+  .cog-iconBox-icon + .cog-iconBox-content
+    padding 0 0 0 50px
+  &:hover
+    opacity 1
+    .cog-iconBox-icon-inner:before
+      transform rotate(-45deg)
+
+.cog-slick-wrapper
+  padding 3.75em 0 6em
+  clearfix()
+.cog-slick
+  padding 2em
+  border 1px solid $motive;
+  position relative
+  &:before
+    content '\f10d'
+    position absolute
+    top -100px
+    margin auto
+    left 0
+    right 0
+    width 50px
+    height 50px
+    font-family FontAwesome
+    font-size 3em
+    text-align center
+    background $violet
+    z-index 1
+  .item
+    p
+      margin 0 0 10px
+    span
+      font-size 1.6em
+  ul.slick-dots
+    position absolute
+    text-align center
+    bottom -50px
+    left 0
+    width 100%
+    li
+      display inline-block
+      padding 0
+      button
+        width 12px
+        height 12px
+        padding 0
+        font-size 0
+        line-height 0
+        position relative
+        background transparent
+        border none
+        outline none !important
+        &:before
+          content ''
+          border 1px solid $motive
+          transform rotate(-45deg)
+          transition all 0.3s ease
+          width 100%
+          height 100%
+          position absolute
+          top 0
+          left 0
+        &:hover:before
+          transform rotate(45deg)
+          @extend .z-depth-1
+      &.slick-active button:before
+        background $motive
+        transform rotate(45deg)
+      + li
+        margin-left 15px
+
+#about
+  .separator
+    margin 4em auto
+
+
+// Timeline
+.cog-timelineList
+  padding 25px 0 0
+  margin 0
+  li
+    margin-top 25px
+    margin-bottom 25px
+    transition opacity 0.3s ease
+    span
+      display block
+      border 1px solid $motive
+      margin-bottom 15px
+      padding 1px 5px
+      position relative
+      &:before, &:after
+        content ''
+        position absolute
+        transform rotate(45deg)
+        transition all 0.5s ease
+      &:before
+        width 12px
+        height 12px
+        background #eee
+        top 6px
+      &:after
+        width 16px
+        height 16px
+        background transparent
+        border 1px solid $motive
+        top 4px
+    h4
+      font-size 1.5em
+.cog-timeline
+  padding 0 !important
+  margin 0
+  > i
+    font-size 34px
+    display block
+    margin 10px auto
+  h3
+    padding-bottom 15px
+    border-bottom 1px solid $motive
+    font-family Oswald, sans-serif
+    font-size 3.5rem
+  &--left .cog-timelineList
+    border-right 1px solid $motive
+    text-align right
+    padding-top 70px
+    li
+      margin-right 25px
+      span
+        &:before
+          right -32px
+        &:after
+          right -34px
+  &--right .cog-timelineList
+    text-align left
+    li
+      margin-left 25px
+      span
+        &:before
+          left -32px
+        &:after
+          left -34px
+.cog-timeline-wrapper
+  padding-bottom 3em
+
+.cog-graphBox
+  text-align center
+  margin 40px auto 80px
+  .cog-graphBox-graph
+    position relative
+    span
+      position absolute
+      top 50%
+      left 0
+      right 0
+      margin-top -0.6em
+      font-size 2.5em
+      line-height 1
+      text-align center
+      font-family 'Oswald', sans-serif
+      &:after
+        content '%'
+        position relative
+        font-size 0.75em
+  .cog-graphBox-content
+    h4
+      font-size 1.85em
+      margin-top 0.25em
+
+// Progress
+.cog-progress
+  width 100%
+  height 25px
+  position relative
+  background rgba(255,255,255, 0.2)
+  margin-bottom 50px
+  .cog-progress-bar
+    position absolute
+    bottom 0
+    left 0
+    height 25px
+    width 0
+    transition width 2s ease
+    background #eee
+    span
+      position absolute
+      top -25px
+      right 0
+  h4
+    font-size 1.5em
+    position absolute
+    top -1.5em
+    left 2.5em
+.cog-progress-container
+  padding-top 4em
+
+// Gallery
+.cog-gallery
+  position relative
+  width 100%
+  padding-bottom 2em
+  .item
+    transition-property opacity, box-shadow
+    transition-duration 0.2s
+    transition-timing-function ease
+    a
+      display block
+    &.is-dragging
+      z-index 2
+    &:hover
+      @extend .z-depth-2
+      z-index 1
+  .itemSmall
+    width 25%
+    img
+      width 240px
+  .itemWide
+    width 50%
+    img
+      width 480px
+  .hidden
+    opacity 0.25
+
+// Gallery Filters
+.cog-gallery-filters
+  padding-bottom 1.5em
+  li
+    display inline-block
+    a
+      display block
+      border 1px solid white
+      padding 0.5em 0.75em
+      transition all 0.2s ease
+      color white
+      &:hover
+        @extend .z-depth-1-half
+        color white
+        &:active
+          @extend .z-depth-1
+      &.active
+        background white
+        color $green
+    + li
+      margin-left 10px
+.portfolio-help
+  position relative
+  a
+    position relative
+    left 5px
+    top -5px
+    color #eee
+    i
+      transition transform 0.2s ease
+    &:hover i
+      transform rotate(90deg)
+
+// Blog
+.cog-blog
+  .cog-blog-outer
+    position relative
+  .cog-blog-media
+    overflow hidden
+    max-height 110px
+    position relative
+    border 1px solid white
+    img
+      width 1100px
+  .cog-blog-content
+    display none
+    transition all 0.4s ease
+    padding-bottom 40px
+  &.open .cog-blog-content
+    display block
+  .cog-blog-header
+    letter-spacing 2px
+    font-size 1.75em
+    font-weight 300
+  .cog-blog-outer, .cog-blog-header, .cog-blog-meta
+    &:hover
+      cursor pointer
+  .cog-blog-meta
+    margin-top 0
+    a
+      color white
+  .cog-blog-number
+    display block
+    position absolute
+    background $blue
+    border 1px solid white
+    top 50%
+    left 30px
+    span
+      position absolute
+      display block
+      line-height 1
+      text-align center
+      width 100%
+      top 0
+      font-family 'Oswald'
+  .cog-blog-inner
+    padding-top 1em
+    padding-left 16%
+    text-align left
+  .cog-ajax
+    color white
+    transition all 0.25s ease
+    padding 0.5em 1em
+    border 1px solid white
+    margin-top 0.5em
+    display inline-block
+    &:hover
+      @extend .z-depth-1-half
+      &:active
+        @extend .z-depth-1
+
+// Blog Post
+.cog-blogPost
+  padding 2em
+  background $blue
+  border 1px solid white
+  height 90vh
+  overflow hidden
+  transition all 0.5s ease
+  color white
+  position relative
+  top -100%
+  header
+    overflow hidden
+  .cog-blogPost-media
+    border 1px solid white
+  .cog-blogPost-content
+    text-align center
+    font-size 1em
+  .cog-blogPost-meta
+    font-size 1.05em
+    text-align center
+    letter-spacing 1px
+    i
+      line-height 1.6
+      margin-right 5px
+    span
+      margin-right 5px
+    a
+      margin-right 5px
+      color white
+  .cog-comment
+    display table
+    padding 20px 0 60px
+    margin-bottom 20px
+    border-bottom 1px solid rgba(255,255,255,0.4)
+    .cog-comment-avatar, .cog-comment-content
+      display table-cell
+      vertical-align top
+    .cog-comment-avatar
+      position relative
+      display inline-block
+      &-media
+        overflow hidden
+        border 1px solid white
+        height 80px
+        width 80px
+    .cog-comment-reply
+      position absolute
+      height 25px
+      width 100%
+      font-weight 300
+      line-height 21px
+      letter-spacing 1px
+      border 1px solid $motive
+      background-color transparent
+      color white
+      bottom -36px
+      left 0
+      transition all 0.4s ease
+      &:hover
+        @extend .z-depth-1-half
+        &:active
+          @extend .z-depth-1
+      &:hover, &:active, &:focus
+        border-color $motive;
+    .cog-comment-content
+      padding-left 25px
+      p
+        margin 0
+    .cog-comment-header
+      margin 0 0 7px
+      font-size 1.3em
+    &--withPadding
+      padding-left 70px
+button.mfp-close
+  float none
+  left 0
+  right 0
+  margin auto
+  top -17px !important
+  border 1px solid white !important
+  background $blue
+  color white !important
+  opacity 1
+  height 34px
+  width 34px
+  line-height 34px
+.cog-blogPost-slick
+  position relative
+  .slick-next, .slick-prev
+    background $blue
+    border 1px solid white
+    width 34px
+    height 34px
+    font-size 0
+    position absolute
+    top 50%
+    margin-top -17px
+    padding 0
+    &:before
+      position absolute
+      width 100%
+      height 100%
+      text-align center
+      line-height 34px
+      font-family FontAwesome
+      font-size 26px
+      top 0
+      left 0
+    &:active, &:focus
+      border-color white
+      outline none
+      @extend .z-depth-1
+  .slick-next
+    right -17px
+    &:before
+      content '\f105'
+      padding-left 2px
+  .slick-prev
+    left -17px
+    &:before
+      content '\f104'
+      padding-right 2px
+button.mfp-close, .cog-blogPost-slick .slick-next, .cog-blogPost-slick .slick-prev
+  transition all 0.25s ease
+  &:hover
+    @extend .z-depth-2
+    &:active
+      @extend .z-depth-1
+
+// Map
+.cog-map
+  padding-bottom 5em
+  a
+    display block
+    img
+      width 100%
+
+// Contact Form
+form
+  padding-bottom 3em
+  .cog-input
+    .cog-input-field
+      color $red
+  button
+    background transparent
+    border none
+    transition all 0.25s ease
+    padding 0.5em 1em
+    border 1px solid white
+    margin-top 0.75em
+    &:hover
+      @extend .z-depth-2
+      &:active
+        @extend .z-depth-1
+
+// Contact List
+.cog-list
+  margin-bottom 2.5em
+  li
+    display table
+    padding 10px 0
+    > i, > span, > a
+      display table-cell
+      vertical-align middle
+    > i
+      font-size 3em
+      width 43px
+      text-align right
+    > span
+      padding-left 2em
+    > a
+      padding-left 1.75em
+      span
+        transition all 0.2s ease
+        color white
+        padding 0.25em 0.5em
+      &:hover span
+        color $red
+        background white
+
+
+
+
+
+
+
+
+
+
+
+
+// Responsive // ---------------------
+@media (min-width $screen-xl)
+  .cog-mobileButton
+    display none
+  .cog-blogPost
+    max-width 50vw
+    margin auto
+@media (min-width $screen-md)
+  .cog-timeline-wrapper
+    &:hover
+      .cog-timelineList li
+        opacity 0.4
+        &:hover
+          opacity 1
+@media (max-width $screen-lg-max)
+  .cog-content
+    width 100% !important
+    left 0
+    &.toRight
+      &.active
+        left 0
+        z-index 4000
+    &.toLeft
+      &.active
+        left 0
+        z-index 4000
+    &.toRightGO
+      left -100%
+    &.toLeftGO
+      left -100%
+@media (max-width $screen-sm-max)
+  .cog-iconBox
+    .cog-iconBox-icon, .cog-iconBox-content
+      vertical-align top
+    .cog-iconBox-icon-inner
+      width 50px
+      height 50px
+      line-height 50px
+      font-size 2em
+    .cog-iconBox-content
+      padding-right 15px
+    .cog-iconBox-icon + .cog-iconBox-content
+      padding 0 0 0 15px
+  .cog-slick
+    .item
+      padding-right 0
+  .cog-timeline
+    > i
+    margin-top 0
+    padding-bottom 20px
+    h3
+      margin-left 15%
+      margin-right 15%
+    .cog-timelineList
+      padding-bottom 40px
+      li:last-child
+        margin-bottom 0
+    &--left .cog-timelineList
+      border-bottom 1px solid $motive
+    &--right
+      border-left 1px solid $motive;
+  .cog-gallery-filters
+    li
+      margin 5px
+
+@media (max-width $screen-xs-max)
+  .cog-gallery
+    .item
+      width 100% !important
+      margin-bottom 34px
+      img
+        width 100%
+      &.hidden
+        display none
+  .portfolio-help
+    display none
+  .cog-blog
+    .cog-blog-header
+      font-size 1.2em
+      font-weight normal
+    .cog-blog-inner
+      padding 2em 0 0

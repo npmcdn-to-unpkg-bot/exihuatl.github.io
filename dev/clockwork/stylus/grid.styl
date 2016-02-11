@@ -1,0 +1,188 @@
+.container
+  padding 0 ($gutter-width / 2)
+  margin 0 auto
+  max-width 1280px
+  width 90%
+
+.container-fluid
+  padding 0 ($gutter-width / 2)
+  margin 0 auto
+  width 100%
+
+.container, .container-fluid
+  .row
+    margin-left (-1 * $gutter-width / 2)
+    margin-right (-1 * $gutter-width / 2)
+    // Clear floating children
+    clearfix()
+
+    .col
+      float left
+      position relative
+      min-height 1px
+      padding-left ($gutter-width / 2)
+      padding-right ($gutter-width / 2)
+
+.col
+  width 100%
+
+// Column Breakpoints // --------------------------
+
+@media (min-width: $screen-xs)
+  for $number in (1..$num-cols)
+    $numfloor = floor($number)
+    $perc = (100 / ($num-cols / $number)) + "%"
+    .xs-{$number}
+      width $perc
+    .offset-xs-{$number}
+      margin-left $perc
+    .push-xs-{$number}
+      left $perc
+    .pull-xs-{$number}
+      right $perc
+
+@media (min-width: $screen-sm)
+  for $number in (1..$num-cols)
+    $numfloor = floor($number)
+    $perc = (100 / ($num-cols / $number)) + "%"
+    .sm-{$number}
+      width $perc
+    .offset-sm-{$number}
+      margin-left $perc
+    .push-sm-{$number}
+      left $perc
+    .pull-sm-{$number}
+      right $perc
+
+@media (min-width: $screen-md)
+  for $number in (1..$num-cols)
+    $numfloor = floor($number)
+    $perc = (100 / ($num-cols / $number)) + "%"
+    .md-{$number}
+      width $perc
+    .offset-md-{$number}
+      margin-left $perc
+    .push-md-{$number}
+      left $perc
+    .pull-md-{$number}
+      right $perc
+
+@media (min-width: $screen-lg)
+  for $number in (1..$num-cols)
+    $numfloor = floor($number)
+    $perc = (100 / ($num-cols / $number)) + "%"
+    .lg-{$number}
+      width $perc
+    .offset-lg-{$number}
+      margin-left $perc
+    .push-lg-{$number}
+      left $perc
+    .pull-lg-{$number}
+      right $perc
+
+@media (min-width: $screen-xl)
+  for $number in (1..$num-cols)
+    $numfloor = floor($number)
+    $perc = (100 / ($num-cols / $number)) + "%"
+    .xl-{$number}
+      width $perc
+    .offset-xl-{$number}
+      margin-left $perc
+    .push-xl-{$number}
+      left $perc
+    .pull-xl-{$number}
+      right $perc
+.container
+  padding 0 ($gutter-width / 2)
+  margin 0 auto
+  max-width 1280px
+  width 90%
+
+.container-fluid
+  padding 0 ($gutter-width / 2)
+  margin 0 auto
+  width 100%
+
+.container, .container-fluid
+  .row
+    margin-left (-1 * $gutter-width / 2)
+    margin-right (-1 * $gutter-width / 2)
+    // Clear floating children
+    clearfix()
+
+    .col
+      float left
+      position relative
+      min-height 1px
+      padding-left ($gutter-width / 2)
+      padding-right ($gutter-width / 2)
+
+.col
+  width 100%
+
+// Column Breakpoints // --------------------------
+
+@media (min-width: $screen-xs)
+  for $number in (1..$num-cols)
+    $numfloor = floor($number)
+    $perc = (100 / ($num-cols / $number)) + "%"
+    .xs-{$number}
+      width $perc
+    .offset-xs-{$number}
+      margin-left $perc
+    .push-xs-{$number}
+      left $perc
+    .pull-xs-{$number}
+      right $perc
+
+@media (min-width: $screen-sm)
+  for $number in (1..$num-cols)
+    $numfloor = floor($number)
+    $perc = (100 / ($num-cols / $number)) + "%"
+    .sm-{$number}
+      width $perc
+    .offset-sm-{$number}
+      margin-left $perc
+    .push-sm-{$number}
+      left $perc
+    .pull-sm-{$number}
+      right $perc
+
+@media (min-width: $screen-md)
+  for $number in (1..$num-cols)
+    $numfloor = floor($number)
+    $perc = (100 / ($num-cols / $number)) + "%"
+    .md-{$number}
+      width $perc
+    .offset-md-{$number}
+      margin-left $perc
+    .push-md-{$number}
+      left $perc
+    .pull-md-{$number}
+      right $perc
+
+@media (min-width: $screen-lg)
+  for $number in (1..$num-cols)
+    $numfloor = floor($number)
+    $perc = (100 / ($num-cols / $number)) + "%"
+    .lg-{$number}
+      width $perc
+    .offset-lg-{$number}
+      margin-left $perc
+    .push-lg-{$number}
+      left $perc
+    .pull-lg-{$number}
+      right $perc
+
+@media (min-width: $screen-xl)
+  for $number in (1..$num-cols)
+    $numfloor = floor($number)
+    $perc = (100 / ($num-cols / $number)) + "%"
+    .xl-{$number}
+      width $perc
+    .offset-xl-{$number}
+      margin-left $perc
+    .push-xl-{$number}
+      left $perc
+    .pull-xl-{$number}
+      right $perc

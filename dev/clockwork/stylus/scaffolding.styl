@@ -1,0 +1,85 @@
+*, *:before, *:after
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
+img, figure
+  max-width: 100%
+
+ul
+  list-style none
+  padding-left 0
+
+figure
+  margin 0
+
+img
+  vertical-align middle
+
+html
+  width: 100%
+  overflow-x: hidden
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-font-smoothing: antialiased;
+  -ms-overflow-style: scrollbar;
+
+input, button, select, textarea
+  font-family inherit
+  font-size inherit
+  line-height inherit
+
+.sr-only
+  position absolute
+  size 1px 1px
+  margin -1px
+  padding 0
+  overflow hidden
+  clip rect(0,0,0,0)
+  border 0
+
+.text-hide, text-hide()
+  font '0/0'
+  color transparent
+  text-shadow none
+  background transparent
+  border 0
+
+[role="button"]
+  cursor pointer
+
+.divider
+  height $divider-height
+  overflow hidden;
+  background-color $divider-color
+
+
+// Outline on Focus
+if tab-focus is true
+  *:focus
+    outline thin dotted
+    outline 5px auto -webkit-focus-ring-color
+    outline-offset -2px
+else
+  *:focus
+    outline none
+
+
+// Z-levels //
+
+.z-depth-1
+  box-shadow 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12)
+
+.z-depth-1-half
+  box-shadow 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15)
+
+.z-depth-2
+  box-shadow 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+
+.z-depth-3
+  box-shadow 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19)
+
+.z-depth-4
+  box-shadow 0 16px 28px 0 rgba(0, 0, 0, 0.22), 0 25px 55px 0 rgba(0, 0, 0, 0.21)
+
+.z-depth-5
+  box-shadow 0 27px 24px 0 rgba(0, 0, 0, 0.2), 0 40px 77px 0 rgba(0, 0, 0, 0.22)

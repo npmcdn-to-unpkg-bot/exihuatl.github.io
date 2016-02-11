@@ -1,0 +1,33 @@
+type-01()
+  .cog-input-field
+    padding 0.8em 0.25em
+  textarea + label
+    padding-top 0.8em
+  label
+    position absolute
+    width 100%
+    height 100%
+    text-align left
+    pointer-events none
+    span
+      transition transform 0.3s
+    &:before, &:after
+      content ''
+      position absolute
+      left 0
+      z-index -1
+      width 100%
+      height 2px
+      background $input-color
+      transition transform 0.3s
+    &:before
+      top 0
+    &:after
+      bottom 0
+
+  .cog-input-field:focus + label span, &.input--filled label span
+    transform translate3d(0, -190%, 0)
+  .cog-input-field:focus + label:before, &.input--filled label:before
+    transform translate3d(0, -0.5em, 0)
+  .cog-input-field:focus + label:after, &.input--filled label:after
+    transform translate3d(0, 0.5em, 0)

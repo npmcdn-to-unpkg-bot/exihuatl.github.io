@@ -1,0 +1,203 @@
+// Base
+.cog-input
+  position relative
+  z-index 1
+  display inline-block
+  margin $input-margin 0
+  width 100%
+  vertical-align top
+
+  .cog-input-field
+    position relative
+    display block
+    float right
+    padding 0.8em
+    width 100%
+    border none
+    border-radius 0
+    background $input-background
+    color $input-color
+    font-size $input-font-size
+    font-weight $input-font-weight
+    -webkit-appearance none
+    &:focus
+      outline none
+  textarea
+    padding 0.5em 0
+    + label
+      padding-top 0.8em
+
+  label
+    display block
+    float right
+    width 100%
+    height 100%
+    color $input-color
+    font-size $input-font-size
+    font-weight $input-font-weight
+    -webkit-font-smoothing antialiased
+    -moz-osx-font-smoothing grayscale
+    -webkit-touch-callout none
+      -webkit-user-select none
+       -khtml-user-select none
+         -moz-user-select none
+          -ms-user-select none
+              user-select none
+    span
+      position relative
+      display block
+      width 100%
+    .graphic
+      position absolute
+      top 0
+      left 0
+      fill none
+    .icon
+      color $input-color
+      font-size 150%
+  input + label
+    display flex
+    align-items center
+
+@-webkit-keyframes input-animation-01 {
+	50% {
+		opacity: 0;
+		-webkit-transform: translate3d(1em, 0, 0);
+		transform: translate3d(1em, 0, 0);
+	}
+	51% {
+		opacity: 0;
+		-webkit-transform: translate3d(-1em, -1.5em, 0);
+		transform: translate3d(-1em, -1.5em, 0);
+	}
+	100% {
+		opacity: 1;
+		-webkit-transform: translate3d(0, -1.5em, 0);
+		transform: translate3d(0, -1.5em, 0);
+	}
+}
+
+@keyframes input-animation-01 {
+	50% {
+		opacity: 0;
+		-webkit-transform: translate3d(1em, 0, 0);
+		transform: translate3d(1em, 0, 0);
+	}
+	51% {
+		opacity: 0;
+		-webkit-transform: translate3d(-1em, -1.5em, 0);
+		transform: translate3d(-1em, -1.5em, 0);
+	}
+	100% {
+		opacity: 1;
+		-webkit-transform: translate3d(0, -1.5em, 0);
+		transform: translate3d(0, -1.5em, 0);
+	}
+}
+
+@-webkit-keyframes input-animation-02 {
+	50% {
+		opacity: 0;
+		-webkit-transform: scale3d(0.3, 0.3, 1);
+		transform: scale3d(0.3, 0.3, 1);
+	}
+	51% {
+		opacity: 0;
+		-webkit-transform: translate3d(0, -2,2em, 0) scale3d(0.3, 0.3, 1);
+		transform: translate3d(0, -2,2em, 0) scale3d(0.3, 0.3, 1);
+	}
+	100% {
+		opacity: 1;
+		-webkit-transform: translate3d(0, -2.2em, 0);
+		transform: translate3d(0, -2.2em, 0);
+	}
+}
+@keyframes input-animation-02 {
+	50% {
+		opacity: 0;
+		-webkit-transform: scale3d(0.3, 0.3, 1);
+		transform: scale3d(0.3, 0.3, 1);
+	}
+	51% {
+		opacity: 0;
+		-webkit-transform: translate3d(0, -2,2em, 0) scale3d(0.3, 0.3, 1);
+		transform: translate3d(0, -2,2em, 0) scale3d(0.3, 0.3, 1);
+	}
+	100% {
+		opacity: 1;
+		-webkit-transform: translate3d(0, -2.2em, 0);
+		transform: translate3d(0, -2.2em, 0);
+	}
+}
+
+
+
+
+
+
+
+
+
+// Imports //
+
+if $import-input-effect == all
+  @import 'combined'
+
+else
+  if $import-input-effect == type1
+    @import 'type-01'
+
+  else if $import-input-effect == type2
+    @import 'type-02'
+
+  else if $import-input-effect == type3
+    @import 'type-03'
+
+  else if $import-input-effect == type4
+    @import 'type-04'
+
+  else if $import-input-effect == type5
+    @import 'type-05'
+
+  else if $import-input-effect == type6
+    @import 'type-06'
+
+  else if $import-input-effect == type7
+    @import 'type-07'
+
+  else if $import-input-effect == type8
+    @import 'type-08'
+
+  else if $import-input-effect == type9
+    @import 'type-09'
+
+  else if $import-input-effect == type10
+    @import 'type-10'
+
+  else if $import-input-effect == type11
+    @import 'type-11'
+
+  else if $import-input-effect == type12
+    @import 'type-12'
+
+  else if $import-input-effect == type13
+    @import 'type-13'
+
+  else if $import-input-effect == type14
+    @import 'type-14'
+
+  .cog-input
+    type-01()
+    type-02()
+    type-03()
+    type-04()
+    type-05()
+    type-06()
+    type-07()
+    type-08()
+    type-09()
+    type-10()
+    type-11()
+    type-12()
+    type-13()
+    type-14()

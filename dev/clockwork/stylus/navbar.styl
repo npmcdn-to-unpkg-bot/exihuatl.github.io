@@ -1,0 +1,127 @@
+nav
+  color white
+  @extend .z-depth-1
+  background-color $navbar-bg
+  width 100%
+  height $navbar-height
+  line-height $navbar-height
+  font-size $navbar-font-size
+
+  a
+    color white
+
+  .container
+    padding 0
+
+  .nav-wrapper
+    position relative
+    height 100%
+
+    i
+      display block
+      font-size 2em
+
+  a.button-collapse
+    float left
+    position relative
+    z-index 1
+    height $navbar-height
+
+    i
+      font-size 2.7em
+      height $navbar-height
+      line-height $navbar-height
+
+  // Logo //
+  .brand-logo
+    position absolute
+    color white
+    height $navbar-height-mobile
+    display flex
+    align-items center
+    font-size 2em
+    padding 0
+    img
+      max-height round((@height * 0.85))
+    &.center
+      left 50%
+      transform translateX(-50%)
+    &.right
+      right 0.5rem
+      padding 0
+
+  // Navbar Links
+  ul
+    margin 0
+    clearfix()
+    li
+      transition background-color .3s
+      float left
+      padding 0
+      &:hover, &.active
+        background-color rgba(0,0,0,0.1)
+    a
+      font-size 1em
+      color white
+      display block
+      padding 0 15px
+      &:hover, &:focus
+        color inherit
+    &.left
+      float left
+
+  // Navbar Search Form
+  .input-field
+    margin 0
+    input
+      height 100%
+      font-size 1.2rem
+      border none
+      padding-left 2rem
+
+      &:focus, &[type=text]:valid, &[type=password]:valid,
+      &[type=email]:valid, &[type=url]:valid, &[type=date]:valid
+        border none
+        box-shadow none
+    label
+      top 0
+      left 0
+      i
+        color rgba(255,255,255,.7)
+        transition color .3s
+      &.active
+        transform translateY(0)
+        i
+          color white
+
+// Fixed Navbar
+.navbar-fixed
+  position relative
+  height $navbar-height
+  z-index 998
+  nav
+    position fixed
+    top 0
+
+// Navbar for Desktops
+@media (max-width: $navbar-mobile-res)
+  nav .brand-logo
+    left 50%
+    transform translateX(-50%)
+  nav ul.navbar-nav
+    display none
+
+  nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i, nav .brand-logo
+    line-height $navbar-height-mobile
+    height $navbar-height-mobile;
+  .navbar-fixed
+    height $navbar-height-mobile
+
+// Collapse button //
+@media only screen and (min-width: ($navbar-mobile-res + 1px))
+  a.button-collapse
+    display none
+
+// Dropdown changes for navbar //
+nav .dropdown-content
+  top 100%
