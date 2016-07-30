@@ -1,10 +1,9 @@
+const webpack = require('webpack');
+
 module.exports = {
-  entry: './src/main.jsx',
+  entry: './src/js/app.js',
   output: {
-    path: './dist/',
-    filename: 'app.js',
-    pathInfo: true,
-    publicPath: '/dist/',
+    filename: 'app.min.js',
   },
   debug: true,
   devtool: 'source-map',
@@ -15,9 +14,15 @@ module.exports = {
         loader: 'babel-loader',
         exclude: /node_modules/,
         query: {
-          presets: ['es2015', 'react', 'react-hmre'],
+          presets: ['es2015'],
         },
       },
     ],
   },
+  plugins: [
+    new webpack.optimize.UglifyJsPlugin({
+      sourceMap: true,
+      mangle: false,
+    }),
+  ],
 };
