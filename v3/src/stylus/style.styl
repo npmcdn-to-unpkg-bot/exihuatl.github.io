@@ -1,0 +1,48 @@
+@import './variables';
+@import './parts/content';
+@import './parts/grid';
+@import './parts/sidebar';
+
+html,
+body
+  width 100vw
+  height 100vh
+  overflow hidden
+body
+  margin 0
+  background url('../assets/images/background.jpg')
+  background-size cover
+  background-attachment fixed
+  font-size 15px
+*
+  box-sizing border-box
+figure
+  margin 0
+
+.portrait
+  border 1px solid #ddd
+  padding 1rem
+  margin 0 auto
+  display block
+  width 50%
+  max-width 20rem
+
+.btn
+  padding 15px
+
+/* helper class when showing content */
+.noscroll {
+  overflow: hidden;
+}
+
+
+.u-bg--violet
+  background $violet
+.u-bg--orange
+  background $orange
+.u-bg--green
+  background $green
+.u-bg--blue
+  background $blue
+.u-bg--red
+  background $red

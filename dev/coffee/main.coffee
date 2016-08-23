@@ -66,9 +66,21 @@ $('.cog-menuList a').bind 'click', (event) ->
   $clicked.addClass 'js-state--processing'
   clearTimeout $timeout1, $timeout2, $timeout1b, $timeout2b
   $($cogcontent).trigger 'load'
+
+
+
+
+  # MAGIC IF #------------------------------
+
   if !$(sectionId).hasClass('active')
+
     $($cogbutton).removeClass 'active'
+
+
+
+
     if $(sectionId).hasClass('toRight')
+
       if $(mainContent).hasClass('toRightGO')
         $($cogcontent).addClass('toRightGO').removeClass 'active'
         $timeout1 = setTimeout((->
@@ -76,6 +88,7 @@ $('.cog-menuList a').bind 'click', (event) ->
           $(activebtn).addClass 'active'
           return
         ), 1000)
+
       else if $(mainContent).hasClass('toLeftGO')
         $($cogcontent).removeClass 'toLeftGO'
         $($cogcontent).removeClass 'toRightGO'
@@ -86,10 +99,15 @@ $('.cog-menuList a').bind 'click', (event) ->
           $($cogcontent).addClass 'toRightGO'
           return
         ), 1000)
+        
       else
         $(sectionId).addClass 'active'
         $(activebtn).addClass 'active'
         $(mainContent).addClass 'toRightGO'
+
+
+
+
     else if $(sectionId).hasClass('toLeft')
       if $(mainContent).hasClass('toLeftGO')
         $($cogcontent).addClass('toLeftGO').removeClass 'active'
@@ -112,15 +130,33 @@ $('.cog-menuList a').bind 'click', (event) ->
         $(sectionId).addClass 'active'
         $(activebtn).addClass 'active'
         $(mainContent).addClass 'toLeftGO'
+
+
   else
     $($cogcontent).removeClass 'active'
     $($cogbutton).removeClass 'active'
     $($cogcontent).removeClass 'toRightGO'
     $($cogcontent).removeClass 'toLeftGO'
+
+
+
   removeProcessing ->
     $clicked.removeClass 'js-state--processing'
     return
   return false
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   # end doc ready ------------------------------------ #
 $(window).on 'load', ->

@@ -1,37 +1,37 @@
-/** Register menu clicks
- * @param {HTMLElement} element
- */
-function clicky(element) {
-  const home = document.querySelector('#home');
-  const content = document.querySelectorAll('.content');
+class Menu {
+  constructor() {
+    this.home = document.querySelector('#home');
+    this.buttons = document.querySelectorAll('#js-menu .btn');
+    this.content = document.querySelectorAll('.content');
+  }
 
-  element.addEventListener('click', () => {
-    const homePosition = home.getAttribute('data-position');
-    const position = element.getAttribute('data-position');
-    const target = document.querySelector(element.getAttribute('data-target'));
-    const move = target.getAttribute('data-move');
+  toggleActive(element) {
+    element.classList.toggle('is-active');
+  }
 
-    if (homePosition === 'center') {
-      if (move === 'left') {
-        content.forEach((el) => el.setAttribute('data-position', 'right'));
-      } else {
-        content.forEach((el) => el.setAttribute('data-position', 'left'));
-      }
-    } else {
-      if (homePosition === position) {
-        content.forEach((el) => el.setAttribute('data-position', 'right'));
-      } else {
-        content.forEach((el) => el.setAttribute('data-position', 'left'));
-      }
-    }
-    target.setAttribute('data-position', move);
-  });
+  click(element) {
+    console.log(element.target);
+  }
+
+  registerClick(element) {
+    element.addEventListener('click', this.click);
+  }
+
+  init() {
+    this.buttons.forEach((el) => this.registerClick(el));
+  }
 }
+
+
+
+
+
 
 /** Initialization */
 function init() {
-  const menu = document.querySelector('#js-menu');
-  menu.querySelectorAll('.btn').forEach(clicky);
+  const element = document.querySelector('#js-menu');
+  const menu = new Menu(element);
+  menu.init();
 }
 
 export default init;
