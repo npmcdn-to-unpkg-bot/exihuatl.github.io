@@ -1,19 +1,21 @@
+
+
 @import './variables';
 @import './parts/content';
 @import './parts/grid';
 @import './parts/sidebar';
 
-html,
 body
-  width 100vw
-  height 100vh
-  overflow hidden
+  width 100%
+  overflow-x hidden
+  overflow-y scroll
 body
   margin 0
-  background url('../assets/images/background.jpg')
   background-size cover
   background-attachment fixed
   font-size 15px
+  color white
+  font-family 'Roboto', sans-serif
 *
   box-sizing border-box
 figure
@@ -46,3 +48,5 @@ figure
   background $blue
 .u-bg--red
   background $red
+.u-bg--pink
+  background $pink
