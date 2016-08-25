@@ -85,7 +85,7 @@ function loadContent(item) {
     scale3d(${item.offsetWidth / gridItemsContainer.offsetWidth},
     ${item.offsetHeight / getViewport('y')}, 1)`;
 
-  dummy.style.background = getComputedStyle(contentItems[current]).background;
+  dummy.style.background = getComputedStyle(contentItems[current]).backgroundColor;
 
   classie.add(dummy, 'placeholder--trans-in');
   gridItemsContainer.appendChild(dummy);

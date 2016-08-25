@@ -1,0 +1,91 @@
+.menu
+  width 300px
+  height 200px
+  margin 40vh auto 100px
+  position relative
+  filter url('../menu.html#goo')
+  transform translateZ(0)
+
+.menu-wrapper
+  position absolute
+  top 50%
+  left 50%
+  width 40px
+  height 40px
+
+.menu-toggle-button,
+.menu-item-bounce,
+.menu-item-button
+  background #f59393
+  border-radius 50%
+  width 80px
+  height 80px
+  margin-top -40px
+  margin-left -40px
+  color white
+  border none
+  outline none
+  position relative
+
+
+.menu-toggle-button
+  background transparent
+  position relative
+  top 0
+  left 0
+
+.menu-toggle-icon
+  font-size 30px
+  position absolute
+  top 0
+  left 0
+  width 80px
+  height 80px
+  line-height 80px
+
+.menu-items
+  list-style-type none
+  padding 0
+  margin 0
+  position absolute
+  top 0
+  left 0
+
+.menu-item
+  position absolute
+  top 0
+  left 0
+  width 0
+  height 0
+
+.menu-item-bounce
+  position absolute
+  top 0
+  left 0
+
+.menu-item-button
+  width 60px
+  height 60px
+  margin-top -30px
+  margin-left -30px
+  position absolute
+  top 0
+  left 0
+  color #ad4c4c
+  &:before
+    content ''
+    background #f59393
+    width 0
+    height 0
+    border-radius 50%
+    position absolute
+    top 50%
+    left 50%
+    transition all 1s ease-in-out
+    transform translate(-50%, -50%)
+  &.is-active
+    width 100vw
+    height 100vh
+
+.menu-item-button:hover
+  color white

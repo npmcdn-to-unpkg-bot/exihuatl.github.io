@@ -1,0 +1,38 @@
+mixin gridItem(icon, title, bg)
+  figure.grid__item(class='u-bg--' + bg data-bg='u-bg--' + bg)
+    i.fa(class='fa-' + icon)
+    .loader
+    h2.title.title--preview= title
+
+
+extends parts/base
+block body
+
+  .container
+    include ./parts/sidebar
+
+    main.main#theGrid
+      section.grid
+        +gridItem('music', 'About Me', 'violet')
+        +gridItem('music', 'Resume', 'orange')
+        +gridItem('music', 'My Skills', 'pink')
+        +gridItem('music', 'Portfolio', 'green')
+        +gridItem('music', 'Work Process', 'blue')
+        +gridItem('music', 'Contact', 'red')
+
+      section.content
+        button.close-button
+          i.fa.fa-close
+          span Close
+        .scroll-wrap
+          include ./parts/about
+          article.content__item.u-bg--orange
+            h2 Resume
+          article.content__item.u-bg--pink
+            h2 My Skills
+          article.content__item.u-bg--green
+            h2 Portfolio
+          article.content__item.u-bg--blue
+            h2 Work Process
+          article.content__item.u-bg--red
+            h2 Contact

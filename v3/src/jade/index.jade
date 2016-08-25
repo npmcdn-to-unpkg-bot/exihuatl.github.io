@@ -1,5 +1,5 @@
 mixin gridItem(icon, title, bg)
-  figure.grid__item(class='u-bg--' + bg)
+  figure.grid__item(class='u-bg--' + bg data-bg='u-bg--' + bg)
     i.fa(class='fa-' + icon)
     .loader
     h2.title.title--preview= title
@@ -9,30 +9,85 @@ extends parts/base
 block body
 
   .container
-    include ./parts/sidebar
+    //- include ./parts/sidebar
+
+    h1 Patryk Sadza
+
+
+
+
+    .morph-button.morph-button-overlay.morph-button-fixed
+      button(type='button') More Info
+      .morph-content
+        div
+          .content-style-overlay
+            span.icon.icon-close Close the overlay
+            h2 About Parsley
+            p
+              | Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini.
+            p
+              | Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus winter purslane kale. Celery potato scallion desert raisin horseradish spinach carrot soko. Lotus root water spinach fennel kombu maize bamboo shoot green bean swiss chard seakale pumpkin onion chickpea gram corn pea. Brussels sprout coriander water chestnut gourd swiss chard wakame kohlrabi beetroot carrot watercress. Corn amaranth salsify bunya nuts nori azuki bean chickweed potato bell pepper artichoke.
+            p
+              | Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini.
+            p
+              | Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus winter purslane kale. Celery potato scallion desert raisin horseradish spinach carrot soko. Lotus root water spinach fennel kombu maize bamboo shoot green bean swiss chard seakale pumpkin onion chickpea gram corn pea. Brussels sprout coriander water chestnut gourd swiss chard wakame kohlrabi beetroot carrot watercress. Corn amaranth salsify bunya nuts nori azuki bean chickweed potato bell pepper artichoke.
+            p
+              | Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini.
+            p
+              | Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus winter purslane kale. Celery potato scallion desert raisin horseradish spinach carrot soko. Lotus root water spinach fennel kombu maize bamboo shoot green bean swiss chard seakale pumpkin onion chickpea gram corn pea. Brussels sprout coriander water chestnut gourd swiss chard wakame kohlrabi beetroot carrot watercress. Corn amaranth salsify bunya nuts nori azuki bean chickweed potato bell pepper artichoke.
+
+
+
+
+
 
     main.main#theGrid
       section.grid
-        +gridItem('music', 'About Me', 'violet')
-        +gridItem('music', 'Resume', 'orange')
-        +gridItem('music', 'My Skills', 'pink')
-        +gridItem('music', 'Portfolio', 'green')
-        +gridItem('music', 'Work Process', 'blue')
-        +gridItem('music', 'Contact', 'red')
+        //- +gridItem('music', 'About Me', 'violet')
+        //- +gridItem('music', 'Resume', 'orange')
+        //- +gridItem('music', 'My Skills', 'pink')
+        //- +gridItem('music', 'Portfolio', 'green')
+        //- +gridItem('music', 'Work Process', 'blue')
+        //- +gridItem('music', 'Contact', 'red')
 
-      section.content
-        button.close-button
-          i.fa.fa-close
-          span Close
-        .scroll-wrap
-          include ./parts/about
-          article.content__item.u-bg--orange
-            h2 Resume
-          article.content__item.u-bg--pink
-            h2 My Skills
-          article.content__item.u-bg--green
-            h2 Portfolio
-          article.content__item.u-bg--blue
-            h2 Work Process
-          article.content__item.u-bg--red
-            h2 Contact
+
+        .menu
+          .menu-wrapper
+            ul.menu-items
+              li.menu-item
+                button.menu-item-button#button
+                  | +
+                .menu-item-bounce
+              li.menu-item
+                button.menu-item-button
+                  i.menu-item-icon.icon.icon-box
+                .menu-item-bounce
+              li.menu-item
+                button.menu-item-button
+                  i.menu-item-icon.icon.icon-trash
+                .menu-item-bounce
+              li.menu-item
+                button.menu-item-button
+                  i.menu-item-icon.icon.icon-trash
+                .menu-item-bounce
+            button.menu-toggle-button
+              i.fa.fa-plus.menu-toggle-icon
+
+
+
+      //- section.content
+      //-   button.close-button
+      //-     i.fa.fa-close
+      //-     span Close
+      //-   .scroll-wrap
+      //-     include ./parts/about
+      //-     article.content__item.u-bg--orange
+      //-       h2 Resume
+      //-     article.content__item.u-bg--pink
+      //-       h2 My Skills
+      //-     article.content__item.u-bg--green
+      //-       h2 Portfolio
+      //-     article.content__item.u-bg--blue
+      //-       h2 Work Process
+      //-     article.content__item.u-bg--red
+      //-       h2 Contact
