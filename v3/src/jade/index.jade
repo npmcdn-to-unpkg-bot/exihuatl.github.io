@@ -8,21 +8,24 @@ mixin gridItem(icon, title, bg)
 extends parts/base
 block body
 
+  #scene
+    #emitter
+
   .container
     //- include ./parts/sidebar
 
     h1 Patryk Sadza
+      small Front-End Developer
 
 
 
 
     .morph-button.morph-button-overlay.morph-button-fixed
-      button(type='button') More Info
       .morph-content
         div
           .content-style-overlay
             span.icon.icon-close Close the overlay
-            h2 About Parsley
+            h2 About Szebene
             p
               | Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini.
             p
@@ -55,19 +58,19 @@ block body
           .menu-wrapper
             ul.menu-items
               li.menu-item
-                button.menu-item-button.u-bg--blue#button
+                button.menu-item-button#button
                   i.menu-item-icon.fa.fa-music
                 .menu-item-bounce
               li.menu-item
-                button.menu-item-button.u-bg--orange
+                button.menu-item-button
                   i.menu-item-icon.fa.fa-music
                 .menu-item-bounce
               li.menu-item
-                button.menu-item-button.u-bg--green
+                button.menu-item-button
                   i.menu-item-icon.fa.fa-music
                 .menu-item-bounce
               li.menu-item
-                button.menu-item-button.u-bg--red
+                button.menu-item-button
                   i.menu-item-icon.fa.fa-music
                 .menu-item-bounce
             button.menu-toggle-button

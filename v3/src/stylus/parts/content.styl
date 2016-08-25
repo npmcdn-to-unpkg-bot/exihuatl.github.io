@@ -663,14 +663,14 @@
 /* Transitions for overlay button and sidebar button */
 .morph-button-overlay .morph-content,
 .morph-button-sidebar .morph-content {
-	-webkit-transition: opacity 0.3s 0.5s, width 0.4s 0.1s, height 0.4s 0.1s, top 0.4s 0.1s, left 0.4s 0.1s;
-	transition: opacity 0.3s 0.5s, width 0.4s 0.1s, height 0.4s 0.1s, top 0.4s 0.1s, left 0.4s 0.1s;
+	-webkit-transition: opacity 0.3s 0.5s, width 0.4s 0.1s, height 0.4s 0.1s, top 0.4s 0.1s, left 0.4s 0.1s, border-radius 0.3s;
+	transition: opacity 0.3s 0.5s, width 0.4s 0.1s, height 0.4s 0.1s, top 0.4s 0.1s, left 0.4s 0.1s, border-radius 0.3s;
 }
 
 .morph-button-overlay.open .morph-content,
 .morph-button-sidebar.open .morph-content {
-	-webkit-transition: width 0.4s 0.1s, height 0.4s 0.1s, top 0.4s 0.1s, left 0.4s 0.1s;
-	transition: width 0.4s 0.1s, height 0.4s 0.1s, top 0.4s 0.1s, left 0.4s 0.1s;
+	-webkit-transition: width 0.4s 0.1s, height 0.4s 0.1s, top 0.4s 0.1s, left 0.4s 0.1s, border-radius 0.3s;
+	transition: width 0.4s 0.1s, height 0.4s 0.1s, top 0.4s 0.1s, left 0.4s 0.1s, border-radius 0.3s;
 }
 
 // /* Morph Button Style: Overlay */
@@ -717,8 +717,8 @@
 
 .morph-button-modal .morph-content {
 	overflow: hidden;
-	-webkit-transition: opacity 0.3s 0.5s, width 0.4s 0.1s, height 0.4s 0.1s, top 0.4s 0.1s, left 0.4s 0.1s, margin 0.4s 0.1s, border-radius 0.3s 0.5s;
-	transition: opacity 0.3s 0.5s, width 0.4s 0.1s, height 0.4s 0.1s, top 0.4s 0.1s, left 0.4s 0.1s, margin 0.4s 0.1s, border-radius 0.3s 0.5s;
+	-webkit-transition: opacity 0.3s 0.5s, width 0.4s 0.1s, height 0.4s 0.1s, top 0.4s 0.1s, left 0.4s 0.1s, margin 0.4s 0.1s, border-radius 0.3s;
+	transition: opacity 0.3s 0.5s, width 0.4s 0.1s, height 0.4s 0.1s, top 0.4s 0.1s, left 0.4s 0.1s, margin 0.4s 0.1s, border-radius 0.3s;
 }
 
 .morph-button-modal.open .morph-content {
@@ -727,8 +727,8 @@
 	margin: -210px 0 0 -300px;
 	width: 600px;
 	height: 420px;
-	-webkit-transition: width 0.4s 0.1s, height 0.4s 0.1s, top 0.4s 0.1s, left 0.4s 0.1s, margin 0.4s 0.1s, border-radius 0.3s 0.5s;
-	transition: width 0.4s 0.1s, height 0.4s 0.1s, top 0.4s 0.1s, left 0.4s 0.1s, margin 0.4s 0.1s, border-radius 0.3s 0.5s;
+	-webkit-transition: width 0.4s 0.1s, height 0.4s 0.1s, top 0.4s 0.1s, left 0.4s 0.1s, margin 0.4s 0.1s, border-radius 0.3s;
+	transition: width 0.4s 0.1s, height 0.4s 0.1s, top 0.4s 0.1s, left 0.4s 0.1s, margin 0.4s 0.1s, border-radius 0.3s;
 }
 
 /* Colors and sizes for individual modals */
@@ -949,9 +949,8 @@
 .morph-content {
   border-radius: 50%;
 }
-
 /* TODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODO */
-.scroll .morph-content {
+.open .morph-content {
   border-radius: 0;
 }
 
@@ -1024,11 +1023,6 @@
 }
 
 @media screen and (max-width: 400px) {
-	.morph-button-fixed,
-	.morph-button-fixed .morph-content {
-		width: 200px;
-		height: 80px;
-	}
 
 	.morph-button-fixed > button {
 		font-size: 75%;

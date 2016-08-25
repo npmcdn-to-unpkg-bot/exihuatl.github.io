@@ -1,5 +1,6 @@
 import './menu';
 import './morphButton';
+import './particles';
 
 (function() {
   var docElem = window.document.documentElement, didScroll, scrollPosition;

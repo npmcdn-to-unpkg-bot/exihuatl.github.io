@@ -7,7 +7,7 @@ const menuItems = document.querySelectorAll('.menu-item');
 const menuItemNum = menuItems.length;
 const angle = 180;
 const distance = 90;
-const startingAngle = 270;
+const startingAngle = 90;
 const slice = angle / (menuItemNum - 1);
 TweenMax.globalTimeScale(0.8);
 
