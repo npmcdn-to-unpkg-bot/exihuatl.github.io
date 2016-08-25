@@ -35,6 +35,8 @@
 
   UIMorphingButton.prototype.options = {
     closeEl: '',
+    element: '',
+    content: '',
     onBeforeOpen() { return false; },
     onAfterOpen() { return false; },
     onBeforeClose() { return false; },
@@ -43,11 +45,11 @@
 
   UIMorphingButton.prototype._init = function () {
     // the button
-    this.button = document.querySelector('#button');
+    this.button = this.options.element;
     // state
     this.expanded = false;
     // content el
-    this.contentEl = this.el.querySelector('.morph-content');
+    this.contentEl = this.options.content;
     // init events
     this._initEvents();
   };
