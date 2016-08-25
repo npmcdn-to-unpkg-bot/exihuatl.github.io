@@ -11,7 +11,7 @@ const startingAngle = 90;
 const slice = angle / (menuItemNum - 1);
 TweenMax.globalTimeScale(0.8);
 
-menuItems.forEach((el, i) => {
+Array.prototype.forEach.call(menuItems, (el, i) => {
   const currentAngle = startingAngle + (slice * i);
   const element = el;
 
@@ -35,7 +35,7 @@ document.addEventListener('mouseup', () => {
 
 
 function openMenu() {
-  document.querySelectorAll('.menu-item').forEach((el, i) => {
+  Array.prototype.forEach.call(document.querySelectorAll('.menu-item'), (el, i) => {
     const delay = i * 0.08;
 
     const bounce = el.querySelectorAll('.menu-item-bounce');
@@ -77,7 +77,7 @@ function openMenu() {
 }
 
 function closeMenu() {
-  document.querySelectorAll('.menu-item').forEach((el, i) => {
+  Array.prototype.forEach.call(document.querySelectorAll('.menu-item'), (el, i) => {
     const delay = i * 0.08;
 
     const bounce = el.querySelectorAll('.menu-item-bounce');
