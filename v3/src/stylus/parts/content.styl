@@ -646,7 +646,7 @@
 
 .morph-button-fixed.open .morph-content > div {
 	visibility: visible;
-	height: auto;
+	height: 100%;
 	opacity: 1;
 	-webkit-transition: opacity 0.3s 0.5s;
 	transition: opacity 0.3s 0.5s;
@@ -663,14 +663,14 @@
 /* Transitions for overlay button and sidebar button */
 .morph-button-overlay .morph-content,
 .morph-button-sidebar .morph-content {
-	-webkit-transition: opacity 0.3s 0.5s, width 0.4s 0.1s, height 0.4s 0.1s, top 0.4s 0.1s, left 0.4s 0.1s, border-radius 0.3s;
-	transition: opacity 0.3s 0.5s, width 0.4s 0.1s, height 0.4s 0.1s, top 0.4s 0.1s, left 0.4s 0.1s, border-radius 0.3s;
+	-webkit-transition: opacity 0.3s 0.5s, width 0.4s 0.1s, height 0.4s 0.1s, top 0.4s 0.1s, left 0.4s 0.1s, border-radius 0.3s, background 0.3s;
+	transition: opacity 0.3s 0.5s, width 0.4s 0.1s, height 0.4s 0.1s, top 0.4s 0.1s, left 0.4s 0.1s, border-radius 0.3s, background 0.3s;
 }
 
 .morph-button-overlay.open .morph-content,
 .morph-button-sidebar.open .morph-content {
-	-webkit-transition: width 0.4s 0.1s, height 0.4s 0.1s, top 0.4s 0.1s, left 0.4s 0.1s, border-radius 0.3s;
-	transition: width 0.4s 0.1s, height 0.4s 0.1s, top 0.4s 0.1s, left 0.4s 0.1s, border-radius 0.3s;
+	-webkit-transition: width 0.4s 0.1s, height 0.4s 0.1s, top 0.4s 0.1s, left 0.4s 0.1s, border-radius 0.3s, background 0.3s;
+	transition: width 0.4s 0.1s, height 0.4s 0.1s, top 0.4s 0.1s, left 0.4s 0.1s, border-radius 0.3s, background 0.3s;
 }
 
 // /* Morph Button Style: Overlay */
@@ -680,7 +680,11 @@
 
 .morph-button-overlay .morph-content {
 	overflow: hidden;
-	background: #e85657;
+	background: white;
+}
+
+.active .morph-content {
+  background: #e85657;
 }
 
 .morph-button-overlay.open .morph-content {
@@ -717,8 +721,8 @@
 
 .morph-button-modal .morph-content {
 	overflow: hidden;
-	-webkit-transition: opacity 0.3s 0.5s, width 0.4s 0.1s, height 0.4s 0.1s, top 0.4s 0.1s, left 0.4s 0.1s, margin 0.4s 0.1s, border-radius 0.3s;
-	transition: opacity 0.3s 0.5s, width 0.4s 0.1s, height 0.4s 0.1s, top 0.4s 0.1s, left 0.4s 0.1s, margin 0.4s 0.1s, border-radius 0.3s;
+	-webkit-transition: opacity 0.3s 0.5s, width 0.4s 0.1s, height 0.4s 0.1s, top 0.4s 0.1s, left 0.4s 0.1s, margin 0.4s 0.1s, border-radius 0.3s, background 0.3s;
+	transition: opacity 0.3s 0.5s, width 0.4s 0.1s, height 0.4s 0.1s, top 0.4s 0.1s, left 0.4s 0.1s, margin 0.4s 0.1s, border-radius 0.3s, background 0.3s;
 }
 
 .morph-button-modal.open .morph-content {
@@ -727,8 +731,8 @@
 	margin: -210px 0 0 -300px;
 	width: 600px;
 	height: 420px;
-	-webkit-transition: width 0.4s 0.1s, height 0.4s 0.1s, top 0.4s 0.1s, left 0.4s 0.1s, margin 0.4s 0.1s, border-radius 0.3s;
-	transition: width 0.4s 0.1s, height 0.4s 0.1s, top 0.4s 0.1s, left 0.4s 0.1s, margin 0.4s 0.1s, border-radius 0.3s;
+	-webkit-transition: width 0.4s 0.1s, height 0.4s 0.1s, top 0.4s 0.1s, left 0.4s 0.1s, margin 0.4s 0.1s, border-radius 0.3s, background 0.3s;
+	transition: width 0.4s 0.1s, height 0.4s 0.1s, top 0.4s 0.1s, left 0.4s 0.1s, margin 0.4s 0.1s, border-radius 0.3s, background 0.3s;
 }
 
 /* Colors and sizes for individual modals */
@@ -954,13 +958,13 @@
   border-radius: 0;
 }
 
-.morph-button-overlay.scroll .morph-content {
-	overflow-y: scroll;
-}
+// .morph-button-overlay.scroll .morph-content {
+// 	overflow-y: scroll;
+// }
 
-.morph-button-sidebar.scroll .morph-content {
-	overflow: auto;
-}
+// .morph-button-sidebar.scroll .morph-content {
+// 	overflow: auto;
+// }
 
 /* No JS fallback: let's hide the button and show the content */
 .no-js .morph-button > button {

@@ -1,8 +1,13 @@
 import './menu';
 import './morphButton';
 import './particles';
+import './simple-scrollbar';
+
+SimpleScrollbar.initEl(document.querySelector('.morph-content'));
+
 
 (function() {
+
   var docElem = window.document.documentElement, didScroll, scrollPosition;
 
   // trick to prevent scrolling when opening/closing button
