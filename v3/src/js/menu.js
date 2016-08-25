@@ -16,7 +16,7 @@ Array.prototype.forEach.call(menuItems, (el, i) => {
   const element = el;
 
   element.style.transform = `rotate(${currentAngle}deg)`;
-  element.querySelector('.menu-item-icon').style.transform = `rotate${currentAngle}deg`;
+  element.querySelector('.menu-item-icon').style.transform = `rotate(${-currentAngle}deg)`;
 });
 
 let on = false;

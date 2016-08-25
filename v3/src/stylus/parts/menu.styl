@@ -16,8 +16,6 @@
 .menu-toggle-button,
 .menu-item-bounce,
 .menu-item-button
-  // background #f59393
-  background white
   color black
   border-radius 50%
   width 80px
@@ -27,13 +25,25 @@
   border none
   outline none
   position relative
+  padding 0
 
+.menu-toggle-button,
+.menu-item-button
+  cursor pointer
+
+.menu-toggle-button,
+.menu-item-bounce
+  // background #2f3545
+  background #fff
 
 .menu-toggle-button
   background transparent
   position relative
   top 0
   left 0
+  img
+    border-radius 50%
+    overflow hidden
 
 .menu-toggle-icon
   font-size 30px
@@ -63,6 +73,11 @@
   position absolute
   top 0
   left 0
+
+img.menu-item-icon
+  width 100%
+  max-width 100%
+  border-radius 50%
 
 .menu-item-button
   width 60px
