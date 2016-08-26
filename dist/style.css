@@ -7,10 +7,7 @@
   margin: auto;
   left: 0;
   right: 0;
-  -webkit-filter: url("../menu.html#goo");
-          filter: url("../menu.html#goo");
-  -webkit-transform: translateZ(0);
-          transform: translateZ(0); }
+}
 
 .menu-wrapper {
   position: absolute;
