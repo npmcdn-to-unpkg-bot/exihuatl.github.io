@@ -8,6 +8,9 @@ mixin gridItem(icon, title, bg)
 extends parts/base
 block body
 
+  .changing
+    span Website is changing.<br>Stay tuned.
+
   #scene
     #emitter
 
@@ -20,30 +23,26 @@ block body
 
 
 
-    .morph-button.morph-button-overlay.morph-button-fixed
+    .morph-wrapper
       .morph-content
-        div
-          .content-style-overlay
-            span.icon.icon-close Close the overlay
-            h2 About Szebene1
-    .morph-button.morph-button-overlay.morph-button-fixed
+        .content-style-overlay
+          span.icon.icon-close Close the overlay
+          h2 About Szebene1
+    .morph-wrapper
       .morph-content
-        div
-          .content-style-overlay
-            span.icon.icon-close Close the overlay
-            h2 About Szebene2
-    .morph-button.morph-button-overlay.morph-button-fixed
+        .content-style-overlay
+          span.icon.icon-close Close the overlay
+          h2 About Szebene2
+    .morph-wrapper
       .morph-content
-        div
-          .content-style-overlay
-            span.icon.icon-close Close the overlay
-            h2 About Szebene3
-    .morph-button.morph-button-overlay.morph-button-fixed
+        .content-style-overlay
+          span.icon.icon-close Close the overlay
+          h2 About Szebene3
+    .morph-wrapper
       .morph-content
-        div
-          .content-style-overlay
-            span.icon.icon-close Close the overlay
-            h2 About Szebene4
+        .content-style-overlay
+          span.icon.icon-close Close the overlay
+          h2 About Szebene4
             //- p
             //-   | Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini.
             //- p

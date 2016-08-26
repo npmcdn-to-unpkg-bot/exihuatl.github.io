@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Simple page about a random developer">
+    <meta name="author" content="Patryk Sadza">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Resume</title>
+    <style>
+      .preloader {
+        position: fixed;
+        z-index: 98;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: white;
+      }
+      .preloader-inner {
+        position: absolute;
+        z-index: 99;
+        height: 64px;
+        width: 64px;
+        top: 50%;
+        left: 50%;
+        margin-top: -32px;
+        margin-left: -32px;
+        background: url("./assets/images/preloader64.gif");
+      }
+      
+    </style>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./dist/style.css">
+    <link rel="shortcut icon" href="./assets/images/favicon.ico">
+    <script src="./dist/modernizr.custom.js"></script>
+  </head>
+  <body>
+    <div class="changing"><span>Website is changing.<br>Stay tuned.</span></div>
+    <div id="scene">
+      <div id="emitter"></div>
+    </div>
+    <div class="container">
+      <h1>Patryk Sadza<small>Front-End Developer</small></h1>
+      <div class="menu">
+        <div class="menu-wrapper">
+          <button style="background: #ffffff" class="menu-toggle-button"><img src="./assets/jelly-icons/PNG/Ring@120w.png" alt="" class="menu-toggle-icon"></button>
+        </div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/classie/1.0.1/classie.min.js"></script>
+    <script src="./dist/app.min.js"></script>
+  </body>
+</html>

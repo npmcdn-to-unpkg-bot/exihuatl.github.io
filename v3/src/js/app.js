@@ -51,7 +51,7 @@ SimpleScrollbar.initEl(document.querySelector('.morph-content'));
 
   scrollFn();
 
-  const morphWrapper = document.querySelectorAll('.morph-button');
+  const morphWrapper = document.querySelectorAll('.morph-wrapper');
   const morphButtons = document.querySelectorAll('.menu-item-button');
 
   Array.prototype.forEach.call(morphButtons, (el, i) => {
@@ -88,38 +88,6 @@ SimpleScrollbar.initEl(document.querySelector('.morph-content'));
       },
     });
   });
-
-
-  // const morph = new UIMorphingButton(document.querySelector('.morph-button'), {
-  //   closeEl: '.icon-close',
-  //   element: document.querySelector('#button'),
-  //   content: document.querySelector('.morph-button').querySelector('.morph-content'),
-  //   onBeforeOpen() {
-  //     // don't allow to scroll
-  //     noScroll();
-  //   },
-  //   onAfterOpen() {
-  //     // can scroll again
-  //     canScroll();
-  //     // add class "noscroll" to body
-  //     classie.addClass(document.body, 'noscroll');
-  //     // add scroll class to main el
-  //     classie.addClass(el, 'scroll');
-  //   },
-  //   onBeforeClose() {
-  //     // remove class "noscroll" to body
-  //     classie.removeClass(document.body, 'noscroll');
-  //     // remove scroll class from main el
-  //     classie.removeClass(el, 'scroll');
-  //     // don't allow to scroll
-  //     noScroll();
-  //   },
-  //   onAfterClose() {
-  //     // can scroll again
-  //     canScroll();
-  //   },
-  // });
-
 
 
   // end

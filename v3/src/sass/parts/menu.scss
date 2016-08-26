@@ -1,0 +1,86 @@
+.menu {
+  width: 300px;
+  height: 200px;
+  position: fixed;
+  top: auto;
+  bottom: 0;
+  margin: auto;
+  left: 0;
+  right: 0;
+  filter: url('../menu.html#goo');
+  transform: translateZ(0);
+}
+
+.menu-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 40px;
+  height: 40px;
+}
+
+.menu-toggle-button,
+.menu-item-bounce,
+.menu-item-button {
+  width: 80px;
+  height: 80px;
+  margin-top: -40px;
+  margin-left: -40px;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  position: relative;
+  padding: 0;
+}
+
+.menu-toggle-button,
+.menu-item-button {
+  cursor: pointer;
+}
+
+.menu-toggle-button,
+.menu-item-bounce {
+  background: #ffffff;
+}
+
+.menu-toggle-button {
+  background: transparent;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.menu-items,
+.menu-item,
+.menu-item-bounce,
+.menu-item-button {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.menu-items {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-item {
+  width: 0;
+  height: 0;
+}
+
+img.menu-item-icon,
+img.menu-toggle-icon {
+  width: 100%;
+  max-width: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.menu-item-button, {
+  width: 60px;
+  height: 60px;
+  margin-top: -30px;
+  margin-left: -30px;
+}
